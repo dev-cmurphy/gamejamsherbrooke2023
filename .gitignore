@@ -63,3 +63,21 @@ crashlytics-build.properties
 
 
 UserSettings/EditorUserSettings.asset
+
+Assets/Wwise/
+
+Assets/Wwise.meta
+
+Assets/WwiseSettings.xml
+
+Assets/WwiseSettings.xml.meta
+
+Assets/StreamingAssets/
+
+Assets/StreamingAssets.meta
+
+WwiseUnityIntegration_Mac_Src.zip
+
+WwiseUnityIntegration_Windows_Src.zip
+
+logRunSetup.txt

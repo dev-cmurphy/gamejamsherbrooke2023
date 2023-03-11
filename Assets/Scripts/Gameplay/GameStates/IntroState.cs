@@ -12,6 +12,7 @@ namespace kingcrimson.gameplay
     internal class IntroState : GameState
     {
         [SerializeField] private PlayState m_playState;
+        [SerializeField] private AK.Wwise.Event m_introEvent;
 
         private Coroutine m_introCoroutine;
 
@@ -48,6 +49,7 @@ namespace kingcrimson.gameplay
 
         private IEnumerator IntroCoroutine()
         {
+            m_introEvent.Post(gameObject);
             yield return null;
         }
     }

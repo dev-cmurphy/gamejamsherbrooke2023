@@ -18,6 +18,9 @@ namespace kingcrimson.gameplay
         [SerializeField] private float m_effectDuration;
 
 
+        [SerializeField] protected AK.Wwise.Event m_travelStartEvent, m_travelStopEvent;
+
+
         [SerializeField] private GameObject m_instantiateOnDestruction;
 
         private bool m_isActive;
@@ -32,11 +35,13 @@ namespace kingcrimson.gameplay
 
         public void Activate()
         {
+            m_travelStartEvent.Post(gameObject);
             m_isActive = true;
         }
 
         public void MarkAsDone()
         {
+            m_travelStopEvent.Post(gameObject);
             m_isOver = true;
         }
 
@@ -53,6 +58,7 @@ namespace kingcrimson.gameplay
             }
 
             m_isActive = false;
+            m_travelStopEvent.Post(gameObject);
             Destroy(this.gameObject, m_sustainTime);
         }
         public override IEnumerator Execute()
@@ -89,6 +95,7 @@ namespace kingcrimson.gameplay
 
                 if (collision.TryGetComponent(out Player p))
                 {
+                    m_hitEvent.Post(gameObject);
                     ApplyEffect(p);
 
                     Destroy(this.gameObject);

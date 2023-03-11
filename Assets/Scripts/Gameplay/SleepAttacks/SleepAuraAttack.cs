@@ -11,6 +11,12 @@ namespace kingcrimson.gameplay
         [Min(0)]
         [SerializeField] private float m_tickPerSecond;
 
+        [SerializeField] private AK.Wwise.RTPC m_rtpcMusique;
+
+        [SerializeField] protected AK.Wwise.Event m_musicStartEvent, m_musicStopEvent;
+
+        [SerializeField] private Transform m_auraTransform;
+
 
         private bool m_isActive;
         private bool m_isOver;
@@ -36,9 +42,19 @@ namespace kingcrimson.gameplay
         }
         public override IEnumerator Execute()
         {
+            m_musicStartEvent.Post(gameObject);
             m_animator.SetTrigger("StartAttack");
             while (!m_isOver)
             {
+                // 100: diminué full
+                // 0 full son
+
+                float scaleFactor = m_auraTransform.localScale.x * 10;
+                float value = 100 - scaleFactor;
+
+                value = Mathf.Clamp(value, 0, Mathf.Sqrt(value));
+                Debug.Log($"Setting aura music value to {value}");
+                m_rtpcMusique.SetValue(gameObject, value);
                 m_tickTimer += Time.fixedDeltaTime;
 
                 if (m_tickTimer >= 1f / m_tickPerSecond)
@@ -52,6 +68,7 @@ namespace kingcrimson.gameplay
 
             m_isActive = false;
 
+            m_musicStopEvent.Post(gameObject);
             Destroy(this.gameObject);
         }
 

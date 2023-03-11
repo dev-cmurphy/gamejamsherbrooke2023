@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 2071902541964215098}
   - component: {fileID: 9164341120410329980}
   - component: {fileID: 672469463629431314}
+  - component: {fileID: 7947816618669622464}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -190,6 +191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 5
+  m_footstepsPlayEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b085b785f6cd1df45a95d7b5ce73a43e, type: 2}
+  m_footstepsStopEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 14c47aa229b0e964696ce7b4a8ae9712, type: 2}
 --- !u!95 &672469463629431314
 Animator:
   serializedVersion: 5
@@ -211,3 +220,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7947816618669622464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6673724259110251915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebadb626f0ee614ab55ee7015c4c83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1

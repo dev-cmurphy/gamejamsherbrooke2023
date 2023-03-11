@@ -40,6 +40,11 @@ namespace kingcrimson.gameplay
             m_isOver = true;
         }
 
+        public void PlayHitSound()
+        {
+            m_hitEvent.Post(gameObject);
+        }
+
         public override IEnumerator Execute()
         {
             m_animator.SetTrigger("StartAttack");
