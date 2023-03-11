@@ -978,7 +978,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.15
+  - time: 1.1
     functionName: StopPlayerFollow
     data: 
     objectReferenceParameter: {fileID: 0}
