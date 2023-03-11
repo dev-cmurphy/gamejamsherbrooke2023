@@ -2,7 +2,10 @@
     "name": "KingCrimson",
     "rootNamespace": "",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:595ce281cab4f3c4db177a4ab01767c7",
+        "GUID:4b2914e94a4e4144aaff8468f9c5e155",
+        "GUID:6a1b4af0aa4e9f84db8382b190e075cc"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

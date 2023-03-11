@@ -15,6 +15,7 @@ namespace kingcrimson.gameplay
         [SerializeField] private EndState m_endState;
         [SerializeField] private GameTime m_gameTime;
 
+
         private bool m_readyToEnd;
 
         protected override void InternalInit()

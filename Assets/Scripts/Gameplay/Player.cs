@@ -5,11 +5,12 @@ using UnityEngine.Events;
 
 namespace kingcrimson.gameplay
 {
-
     public class Player : MonoBehaviour
     {
         [Min(1f)]
         [SerializeField] private float m_maxWokeness;
+
+        [SerializeField] private AK.Wwise.RTPC m_wokenessRTPC;
 
         private float m_wokeness;
 
@@ -19,17 +20,18 @@ namespace kingcrimson.gameplay
         public UnityEvent<float, float> OnWokenessChange;
         public UnityEvent OnSleep;
 
-        private bool m_hasRadioUp;
-
         private Animator m_animator;
+
+        private Radio m_radio;
 
         private void Awake()
         {
             m_animator = GetComponent<Animator>();
             m_wokeness = m_maxWokeness;
             OnWokenessChange = new UnityEvent<float, float>();
-            m_hasRadioUp = false;
             OnSleep = new UnityEvent();
+
+            m_radio = null;
         }
 
         public void ReduceFOV(float duration)
@@ -44,21 +46,44 @@ namespace kingcrimson.gameplay
             m_animator.SetBool("ReducedFOV", false);
         }
 
-        public void ActivateRadio()
+        private void Update()
         {
-            m_hasRadioUp = true;
+            if (m_radio)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    if (m_radio.IsPlaying())
+                    {
+                        m_radio.Stop();
+                    }
+                    else
+                    {
+                        m_radio.Play();
+                    }
+                }
+            }
         }
 
-        public void DeactivateRadio()
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            m_hasRadioUp = false;
-        }
+            if (m_radio != null)
+            {
+                return;
+            }
 
-        // class PlayerRadio ?
+            if (collision.TryGetComponent(out Radio radio))
+            {
+                m_radio = radio;
+                // OnRadioObtained ?
+                m_radio.transform.parent = this.transform;
+                m_radio.transform.localPosition = Vector2.left;
+                m_radio.transform.localScale = Vector2.one * 0.5f;
+            }
+        }
 
         public void ReduceWokeness(float amount, bool preventable = false)
         {
-            if (m_hasRadioUp && preventable)
+            if (m_radio != null && m_radio.IsPlaying() && preventable)
             {
                 return;
             }
@@ -68,6 +93,8 @@ namespace kingcrimson.gameplay
             m_wokeness = Mathf.Clamp(m_wokeness, 0, m_maxWokeness);
 
             OnWokenessChange.Invoke(m_wokeness, amount);
+
+            m_wokenessRTPC.SetValue(gameObject, 100 * (1 - (m_wokeness / m_maxWokeness)));
 
             if (m_wokeness == 0)
             {

@@ -8,6 +8,9 @@ namespace kingcrimson.gameplay
         protected Sleep m_owner;
         protected Player m_target;
 
+
+        [SerializeField] protected AK.Wwise.Event m_hitEvent;
+
         public void Initialize(Sleep sleep, Player player)
         {
             m_owner = sleep;
