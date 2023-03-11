@@ -22,6 +22,7 @@ namespace kingcrimson.ui
         {
             m_player.OnWokenessChange.AddListener(UpdateWokenessBar);
             m_wokenessBar.maxValue = m_player.Wokeness;
+            m_wokenessBar.value = m_player.Wokeness;
         }
 
         private void UpdateWokenessBar(float total, float change)
