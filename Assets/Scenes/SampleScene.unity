@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -317,6 +318,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0612b0c069ebe24c9eaddaf3bf142c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 6085735419939628007}
+  m_camera: {fileID: 519420031}
+  m_lerpSpeed: 4
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,8 +565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9ce970f84d0424f94a9cd6f3626f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_realTimeDuration: 60
-  m_gameMinutes: 60
+  m_realTimeDuration: 600
+  m_gameMinutes: 480
   OnEndReached:
     m_PersistentCalls:
       m_Calls: []
@@ -584,7 +600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd45621470dd4c4d90a83ed1646234c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_wokenessDecayPerTick: 0.05
   m_gameTime: {fileID: 748157228}
+  m_player: {fileID: 6085735419939628002}
 --- !u!1 &864610571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,3 +1270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799a93511a3be134d95d7428557df93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &6085735419939628007 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3093954541386140545, guid: 0e4a9c31306fd5a41ab9176d36536ad0, type: 3}
+  m_PrefabInstance: {fileID: 6085735419939628001}
+  m_PrefabAsset: {fileID: 0}

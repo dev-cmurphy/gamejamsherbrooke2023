@@ -13,7 +13,6 @@ namespace kingcrimson.gameplay
         [SerializeField] private int m_gameMinutes;
 
         private bool m_isTimePassing;
-        private float m_timeElapsed;
         private float m_minuteTimer;
         private int m_minuteCount;
         private float m_minuteDuration;
@@ -21,26 +20,28 @@ namespace kingcrimson.gameplay
         public UnityEvent OnEndReached;
         public UnityEvent<int> OnNewMinute;
 
+        private float m_timeFlowRate;
+
         private void Awake()
         {
             m_isTimePassing = false;
-            m_timeElapsed = 0;
             m_minuteTimer = 0;
             m_minuteCount = 0;
 
             m_minuteDuration = m_realTimeDuration / m_gameMinutes;
+
+            m_timeFlowRate = 1f;
 
             OnEndReached = new UnityEvent();
 
             Debug.Log($"Starting with {m_minuteDuration} seconds per game minute.");
         }
 
-        private void Update()
+        private void TickGameTime()
         {
             if (m_isTimePassing)
             {
-                m_timeElapsed += Time.deltaTime;
-                m_minuteTimer += Time.deltaTime;
+                m_minuteTimer += Time.deltaTime * m_timeFlowRate;
 
                 while (m_minuteTimer >= m_minuteDuration)
                 {
@@ -49,12 +50,17 @@ namespace kingcrimson.gameplay
                     OnNewMinute.Invoke(m_minuteCount);
                 }
 
-                if (m_timeElapsed > m_realTimeDuration)
+                if (m_minuteCount > m_gameMinutes)
                 {
                     ResetTime();
                     OnEndReached.Invoke();
                 }
             }
+        }
+
+        private void Update()
+        {
+            TickGameTime();
         }
 
         public void StartTime()
@@ -70,7 +76,7 @@ namespace kingcrimson.gameplay
         public void ResetTime()
         {
             m_isTimePassing = false;
-            m_timeElapsed = 0;
+            m_minuteCount = 0;
         }
     }
 }
