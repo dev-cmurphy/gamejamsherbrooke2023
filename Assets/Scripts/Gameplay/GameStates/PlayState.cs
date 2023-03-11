@@ -13,6 +13,7 @@ namespace kingcrimson.gameplay
     {
         [SerializeField] private Player m_player;
         [SerializeField] private EndState m_endState;
+        [SerializeField] private GameTime m_gameTime;
 
         private bool m_readyToEnd;
 
@@ -21,6 +22,8 @@ namespace kingcrimson.gameplay
             m_game.StartTime();
             m_player.OnSleep.AddListener(OnPlayerSleep);
             m_readyToEnd = false;
+            m_gameTime.OnEndReached.AddListener(PlayerWin);
+
         }
 
         public void Pause()
@@ -32,6 +35,7 @@ namespace kingcrimson.gameplay
         {
             if (m_readyToEnd)
             {
+                m_player.GetComponent<PlayerMovement>().enabled = false;
                 m_player.OnSleep.RemoveListener(OnPlayerSleep);
                 m_endState.Init(m_game);
                 return m_endState;
@@ -41,6 +45,13 @@ namespace kingcrimson.gameplay
 
         private void OnPlayerSleep()
         {
+            m_endState.IsVictory(false);
+            m_readyToEnd = true;
+        }
+
+        private void PlayerWin()
+        {
+            m_endState.IsVictory(true);
             m_readyToEnd = true;
         }
     }

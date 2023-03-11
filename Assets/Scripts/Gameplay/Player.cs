@@ -29,6 +29,7 @@ namespace kingcrimson.gameplay
             m_wokeness = m_maxWokeness;
             OnWokenessChange = new UnityEvent<float, float>();
             m_hasRadioUp = false;
+            OnSleep = new UnityEvent();
         }
 
         public void ReduceFOV(float duration)

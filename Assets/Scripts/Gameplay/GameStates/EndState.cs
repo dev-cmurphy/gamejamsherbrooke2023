@@ -15,6 +15,7 @@ namespace kingcrimson.gameplay
         [SerializeField] private GameTime m_gameTime;
         private Animator m_animator;
         private bool m_isVictory;
+
         public void IsVictory(bool victory)
         {
             m_isVictory = victory;
@@ -23,9 +24,9 @@ namespace kingcrimson.gameplay
         protected override void InternalInit()
         {
             m_gameTime.PauseTime();
+            m_animator = GetComponent<Animator>();
 
             StartCoroutine(EndCoroutine());
-            m_animator = GetComponent<Animator>();
         }
 
 
@@ -37,6 +38,7 @@ namespace kingcrimson.gameplay
         private IEnumerator EndCoroutine()
         {
             m_animator.SetBool("Victory", m_isVictory);
+            m_animator.SetTrigger("End");
             yield return null;
         }
     }

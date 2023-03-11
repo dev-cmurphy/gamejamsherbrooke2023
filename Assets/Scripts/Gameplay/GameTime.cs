@@ -33,6 +33,7 @@ namespace kingcrimson.gameplay
             m_timeFlowRate = 1f;
 
             OnEndReached = new UnityEvent();
+            OnNewMinute = new UnityEvent<int>();
 
             Debug.Log($"Starting with {m_minuteDuration} seconds per game minute.");
         }
