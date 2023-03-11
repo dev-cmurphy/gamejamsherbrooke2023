@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 3837802584652778618}
   - component: {fileID: 7612538338619312784}
   - component: {fileID: -3240776431414367635}
-  - component: {fileID: 2070225465356057921}
+  - component: {fileID: 2472312330309115919}
   m_Layer: 6
   m_Name: MeleeAttack
   m_TagString: Untagged
@@ -209,7 +209,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2070225465356057921
+--- !u!114 &2472312330309115919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4441288881007134065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cebadb626f0ee614ab55ee7015c4c83a, type: 3}
+  m_Script: {fileID: 11500000, guid: a3a67235f41ca124e9d7245ef218fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:

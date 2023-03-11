@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5559012093740379117}
   - component: {fileID: 5559012093740379118}
   - component: {fileID: 6647295020219200943}
+  - component: {fileID: 7451562492864389829}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -53,11 +54,11 @@ MonoBehaviour:
   m_playRadioEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: da91721ca183df4469afe8d04713934b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f598f91cb189d984988851594492524a, type: 2}
   m_stopRadioEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b49850eb4ce8db84a88d9248a622f403, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6f827707793177240ae7894d572cdd7c, type: 2}
 --- !u!61 &6647295020219200943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84,6 +85,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &7451562492864389829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559012093740379119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a67235f41ca124e9d7245ef218fa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &5559012094260848050
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +188,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5901782214129369369
