@@ -64,14 +64,6 @@ crashlytics-build.properties
 
 UserSettings/EditorUserSettings.asset
 
-Assets/Wwise/
-
-Assets/Wwise.meta
-
-Assets/WwiseSettings.xml
-
-Assets/WwiseSettings.xml.meta
-
 Assets/StreamingAssets/
 
 Assets/StreamingAssets.meta
