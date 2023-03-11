@@ -11,15 +11,12 @@ namespace kingcrimson.gameplay
 
         protected override IEnumerator AttackCoroutine()
         {
-            Debug.Log("Melee attack...");
-
             SleepAttack meleeAttack = GameObject.Instantiate(m_owner.MeleeAttackPrefab);
+            meleeAttack.Initialize(m_owner, m_owner.Player);
 
             meleeAttack.Prepare();
 
-            yield return new WaitForSeconds(1.5f);
-
-            meleeAttack.Execute();
+            yield return meleeAttack.Execute();
 
             Debug.Log("Melee attack done.");
         }

@@ -1265,6 +1265,10 @@ PrefabInstance:
       propertyPath: m_player
       value: 
       objectReference: {fileID: 6085735419939628002}
+    - target: {fileID: 8149952237606221021, guid: 1b58bd62b2caa694a878d84f88d31956, type: 3}
+      propertyPath: MeleeAttackPrefab
+      value: 
+      objectReference: {fileID: 533623518947975702, guid: f755d7568865fe94fbd42a292fb19fac, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b58bd62b2caa694a878d84f88d31956, type: 3}
 --- !u!1001 &6085735419939628001

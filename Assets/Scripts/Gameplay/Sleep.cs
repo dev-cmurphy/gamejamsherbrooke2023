@@ -17,6 +17,8 @@ namespace kingcrimson.gameplay
 
         private StateContext m_context;
 
+        public Player Player { get { return m_player; } }
+
         private void Awake()
         {
             //
