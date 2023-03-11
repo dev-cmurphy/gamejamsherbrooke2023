@@ -12,5 +12,13 @@ namespace kingcrimson.gameplay
         {
             //
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.TryGetComponent(out Player p))
+            {
+                p.ReduceWokeness(1f);
+            }
+        }
     }
 }
