@@ -11,7 +11,7 @@ namespace kingcrimson.gameplay
         [Min(0f)]
         public float Speed;
 
-        public SleepAttack MeleeAttackPrefab, RangedAttackPrefab;
+        public SleepAttack MeleeAttackPrefab, RangedAttackPrefab, AuraAttackPrefab;
 
         private SleepState m_state;
 

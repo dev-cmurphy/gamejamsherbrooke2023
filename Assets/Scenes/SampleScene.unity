@@ -287,7 +287,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0612b0c069ebe24c9eaddaf3bf142c4, type: 3}
   m_Name: 
@@ -1265,6 +1265,10 @@ PrefabInstance:
       propertyPath: m_player
       value: 
       objectReference: {fileID: 6085735419939628002}
+    - target: {fileID: 8149952237606221021, guid: 1b58bd62b2caa694a878d84f88d31956, type: 3}
+      propertyPath: AuraAttackPrefab
+      value: 
+      objectReference: {fileID: 4081147727160013414, guid: f829996d9be9a0f4f951e717b977d9fb, type: 3}
     - target: {fileID: 8149952237606221021, guid: 1b58bd62b2caa694a878d84f88d31956, type: 3}
       propertyPath: MeleeAttackPrefab
       value: 

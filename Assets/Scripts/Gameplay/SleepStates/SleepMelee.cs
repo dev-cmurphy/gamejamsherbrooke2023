@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace kingcrimson.gameplay
 {
+    // vraiment besoin de trois classes différentes ?
     internal class SleepMelee : SleepAttackState
     {
         public SleepMelee(SleepState previousState, Sleep sleep) : base(previousState, sleep)

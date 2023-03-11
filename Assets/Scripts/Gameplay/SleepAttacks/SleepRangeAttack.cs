@@ -17,8 +17,6 @@ namespace kingcrimson.gameplay
         [Min(0)]
         [SerializeField] private float m_effectDuration;
 
-        [Min(0)]
-        [SerializeField] private float m_playerWindUpOffset;
 
         [SerializeField] private GameObject m_instantiateOnDestruction;
 
@@ -53,7 +51,9 @@ namespace kingcrimson.gameplay
                 transform.position = newPos;
                 yield return new WaitForFixedUpdate();
             }
-            yield return null;
+
+            m_isActive = false;
+            Destroy(this.gameObject, m_sustainTime);
         }
         public override IEnumerator Execute()
         {
@@ -81,7 +81,6 @@ namespace kingcrimson.gameplay
             {
                 m_isActive = false;
 
-
                 if (m_instantiateOnDestruction)
                 {
                     var go = GameObject.Instantiate(m_instantiateOnDestruction);
@@ -91,10 +90,9 @@ namespace kingcrimson.gameplay
                 if (collision.TryGetComponent(out Player p))
                 {
                     ApplyEffect(p);
+
+                    Destroy(this.gameObject);
                 }
-
-                Destroy(this.gameObject);
-
             }
         }
     }
