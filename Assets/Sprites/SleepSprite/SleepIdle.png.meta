@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0d767747196120b449a72494ac8b3b33
+guid: 06e641327b9f62a42996a982b99a3786
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SleepMove_0
+      name: SleepIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ac462b8d6c86047be1ae116885c843
+      internalID: 940062518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SleepIdle_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6472b3ccf891525489a38acbe7ea1dbb
+      internalID: -1308592145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SleepIdle_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227e7cff6272d9a4ca8fdb27081660f5
+      internalID: -1283083840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SleepIdle_3
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58685f5cec9db274c98db75248534eed
-      internalID: 891540695
+      spriteID: ccd3fecfaf06a36418cd0b72e25e633b
+      internalID: -1219498611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SleepMove_1
+      name: SleepIdle_4
       rect:
         serializedVersion: 2
         x: 80
@@ -140,14 +203,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 441c1264ae8ec6d47a61a094bce6517b
-      internalID: 537668710
+      spriteID: c0996089971949a488bd5b5ffad6d0a5
+      internalID: 80725434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SleepMove_2
+      name: SleepIdle_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46297e49d56bc9044a31b1f93600c38b
+      internalID: -1889157186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SleepIdle_6
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff20f154a620b49459ac72e5fbc0dffc
-      internalID: 917104559
+      spriteID: 9dc56a81e9c9f3c4095363873d403694
+      internalID: 1895924304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SleepMove_3
+      name: SleepIdle_7
       rect:
         serializedVersion: 2
         x: 80
@@ -182,14 +266,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e1b7e44d01fdaa44befcf718a38e1ea
-      internalID: -1862629610
+      spriteID: 3c32b58aa7cff304186eb002d91bf32e
+      internalID: -577280891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SleepMove_4
+      name: SleepIdle_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828cd73421b5bfc4cb49fbf405b3f35a
+      internalID: -664700602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SleepIdle_9
       rect:
         serializedVersion: 2
         x: 0
@@ -203,29 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27f4e2735fc5a5446b8cd3bad3c9ec49
-      internalID: -1777500164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SleepMove_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88c4207b60ccf054dab2d8a688fbf98c
-      internalID: 1049550455
+      spriteID: fc6372f7ee2997448a850d03349acdd2
+      internalID: -1848280466
       vertices: []
       indices: 
       edges: []
@@ -241,12 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SleepMove_0: 891540695
-      SleepMove_1: 537668710
-      SleepMove_2: 917104559
-      SleepMove_3: -1862629610
-      SleepMove_4: -1777500164
-      SleepMove_5: 1049550455
+      SleepIdle_0: 940062518
+      SleepIdle_1: -1308592145
+      SleepIdle_2: -1283083840
+      SleepIdle_3: -1219498611
+      SleepIdle_4: 80725434
+      SleepIdle_5: -1889157186
+      SleepIdle_6: 1895924304
+      SleepIdle_7: -577280891
+      SleepIdle_8: -664700602
+      SleepIdle_9: -1848280466
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
