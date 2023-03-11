@@ -7,6 +7,7 @@ namespace kingcrimson.gameplay
     public class Sleep : MonoBehaviour
     {
         [SerializeField] private Player m_player;
+        [SerializeField] private GameTime m_gameTime;
 
         [Min(0f)]
         public float Speed;
@@ -36,6 +37,10 @@ namespace kingcrimson.gameplay
 
         private void FixedUpdate()
         {
+            if (!m_gameTime.IsTimePassing())
+            {
+                return;
+            }
             m_context.DeltaTime = Time.fixedDeltaTime;
             m_state = m_state.HandleContext(m_context);
         }

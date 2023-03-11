@@ -39,28 +39,33 @@ namespace kingcrimson.gameplay
 
         private void TickGameTime()
         {
-            if (m_isTimePassing)
+            m_minuteTimer += Time.deltaTime * m_timeFlowRate;
+
+            while (m_minuteTimer >= m_minuteDuration)
             {
-                m_minuteTimer += Time.deltaTime * m_timeFlowRate;
+                m_minuteTimer -= m_minuteDuration;
+                m_minuteCount++;
+                OnNewMinute.Invoke(m_minuteCount);
+            }
 
-                while (m_minuteTimer >= m_minuteDuration)
-                {
-                    m_minuteTimer -= m_minuteDuration;
-                    m_minuteCount++;
-                    OnNewMinute.Invoke(m_minuteCount);
-                }
-
-                if (m_minuteCount > m_gameMinutes)
-                {
-                    ResetTime();
-                    OnEndReached.Invoke();
-                }
+            if (m_minuteCount > m_gameMinutes)
+            {
+                ResetTime();
+                OnEndReached.Invoke();
             }
         }
 
         private void Update()
         {
-            TickGameTime();
+            if (m_isTimePassing)
+            {
+                TickGameTime();
+            }
+        }
+
+        public bool IsTimePassing()
+        {
+            return m_isTimePassing;
         }
 
         public void StartTime()

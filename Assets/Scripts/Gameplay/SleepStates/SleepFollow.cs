@@ -12,8 +12,8 @@ namespace kingcrimson.gameplay
         public SleepFollow(Sleep owner) : base(owner)
         {
             m_lastMeleeTime = -10;
-            m_lastRangeTime = -10;
-            m_lastAuraTime = -30;
+            m_lastRangeTime = 0;
+            m_lastAuraTime = 0;
         }
 
         public override SleepState HandleContext(StateContext context)
@@ -69,7 +69,8 @@ namespace kingcrimson.gameplay
 
         private bool ShouldRange(Vector3 playerDistance)
         {
-            if (playerDistance.magnitude < 10 && (Time.time - m_lastRangeTime) > 5)
+            float d = playerDistance.magnitude;
+            if (d < 15 && d > 5 && (Time.time - m_lastRangeTime) > 10)
             {
                 return true;
             }

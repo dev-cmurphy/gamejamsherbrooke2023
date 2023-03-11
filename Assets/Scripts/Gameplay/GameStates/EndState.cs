@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Playables;
+
+namespace kingcrimson.gameplay
+{
+    [RequireComponent(typeof(Animator))]
+    internal class EndState : GameState
+    {
+        [SerializeField] private GameTime m_gameTime;
+        private Animator m_animator;
+        private bool m_isVictory;
+        public void IsVictory(bool victory)
+        {
+            m_isVictory = victory;
+        }
+
+        protected override void InternalInit()
+        {
+            m_gameTime.PauseTime();
+
+            StartCoroutine(EndCoroutine());
+            m_animator = GetComponent<Animator>();
+        }
+
+
+        public override GameState HandleContext()
+        {
+            return this;
+        }
+
+        private IEnumerator EndCoroutine()
+        {
+            m_animator.SetBool("Victory", m_isVictory);
+            yield return null;
+        }
+    }
+}
