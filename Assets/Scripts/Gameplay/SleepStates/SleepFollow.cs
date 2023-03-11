@@ -5,20 +5,29 @@ namespace kingcrimson.gameplay
     internal class SleepFollow : SleepState
     {
         private float m_lastMeleeTime;
+        private float m_lastRangeTime;
 
         public SleepFollow(Sleep owner) : base(owner)
         {
-            m_lastMeleeTime = Time.time;
+            m_lastMeleeTime = 0;
+            m_lastRangeTime = 0;
         }
 
         public override SleepState HandleContext(StateContext context)
         {
             Vector3 displacement = context.Player.transform.position - m_owner.transform.position;
 
+            float now = Time.time;
             if (ShouldMelee(displacement))
             {
-                m_lastMeleeTime = Time.time;
+                m_lastMeleeTime = now;
                 return new SleepMelee(this, m_owner);
+            }
+
+            if (ShouldRange(displacement))
+            {
+                m_lastRangeTime = now;
+                return new SleepRange(this, m_owner);
             }
 
             displacement.Normalize();
@@ -32,6 +41,16 @@ namespace kingcrimson.gameplay
         private bool ShouldMelee(Vector3 playerDistance)
         {
             if (playerDistance.magnitude < 5 && (Time.time - m_lastMeleeTime) > 4)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool ShouldRange(Vector3 playerDistance)
+        {
+            if (playerDistance.magnitude < 10 && (Time.time - m_lastRangeTime) > 10)
             {
                 return true;
             }

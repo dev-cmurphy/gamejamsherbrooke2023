@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8995119456851962328}
   - component: {fileID: 3115274073431998932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6378952673024402968}
   - component: {fileID: 1885541502216688401}
   - component: {fileID: 8149952237606221021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sleep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,6 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb890405453557146bd67ea1b643b74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_player: {fileID: 0}
+  Speed: 0
+  MeleeAttackPrefab: {fileID: 0}
+  RangedAttackPrefab: {fileID: 0}
 --- !u!1 &6726197796621535484
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9165113219343358079}
   - component: {fileID: 1909416060741407697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

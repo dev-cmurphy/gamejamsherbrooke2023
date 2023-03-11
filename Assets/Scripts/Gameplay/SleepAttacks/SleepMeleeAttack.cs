@@ -47,8 +47,8 @@ namespace kingcrimson.gameplay
             {
                 if (m_shouldFollowPlayer)
                 {
-                    Vector3 direction = (m_target.transform.position + Vector3.up * m_playerWindUpOffset) - m_owner.transform.position;
-                    transform.position = m_owner.transform.position + (direction.normalized * m_playerWindUpOffset);
+                    Vector3 pos = (m_target.transform.position + Vector3.up * m_playerWindUpOffset);
+                    transform.position = pos;
                 }
                 yield return null;
             }
@@ -57,7 +57,7 @@ namespace kingcrimson.gameplay
 
         public override void Prepare()
         {
-            Debug.Log("Preparing to melee attack...");
+            Debug.Log("Preparing melee attack...");
             m_isActive = false;
             m_isOver = false;
             m_shouldFollowPlayer = true;

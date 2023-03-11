@@ -1269,6 +1269,10 @@ PrefabInstance:
       propertyPath: MeleeAttackPrefab
       value: 
       objectReference: {fileID: 533623518947975702, guid: f755d7568865fe94fbd42a292fb19fac, type: 3}
+    - target: {fileID: 8149952237606221021, guid: 1b58bd62b2caa694a878d84f88d31956, type: 3}
+      propertyPath: RangedAttackPrefab
+      value: 
+      objectReference: {fileID: 6450848848024547062, guid: 79bd702957ab6f04a81f7c95ad389dc1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b58bd62b2caa694a878d84f88d31956, type: 3}
 --- !u!1001 &6085735419939628001

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610319164639325066}
   - component: {fileID: 6311128635716980632}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 533623518947975702}
   - component: {fileID: 3837802584652778618}
   - component: {fileID: 7612538338619312784}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MeleeAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7992389583772418284}
   - component: {fileID: 5094808666200637436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

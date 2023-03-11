@@ -19,10 +19,25 @@ namespace kingcrimson.gameplay
         public UnityEvent<float, float> OnWokenessChange;
         public UnityEvent OnSleep;
 
+        private Animator m_animator;
+
         private void Awake()
         {
+            m_animator = GetComponent<Animator>();
             m_wokeness = m_maxWokeness;
             OnWokenessChange = new UnityEvent<float, float>();
+        }
+
+        public void ReduceFOV(float duration)
+        {
+            StartCoroutine(FOVReductionCoroutine(duration));
+        }
+
+        private IEnumerator FOVReductionCoroutine(float duration)
+        {
+            m_animator.SetBool("ReducedFOV", true);
+            yield return new WaitForSeconds(duration);
+            m_animator.SetBool("ReducedFOV", false);
         }
 
         public void ReduceWokeness(float amount)
