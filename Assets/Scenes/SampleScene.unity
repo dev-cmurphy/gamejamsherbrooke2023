@@ -986,14 +986,6 @@ PrefabInstance:
       propertyPath: m_gameTime
       value: 
       objectReference: {fileID: 748157228}
-    - target: {fileID: 5559012093740379118, guid: a4f0f109f98ea194a8657488f82b4432, type: 3}
-      propertyPath: m_playRadioEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: f598f91cb189d984988851594492524a, type: 2}
-    - target: {fileID: 5559012093740379118, guid: a4f0f109f98ea194a8657488f82b4432, type: 3}
-      propertyPath: m_stopRadioEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 6f827707793177240ae7894d572cdd7c, type: 2}
     - target: {fileID: 5559012093740379119, guid: a4f0f109f98ea194a8657488f82b4432, type: 3}
       propertyPath: m_Name
       value: Radio
