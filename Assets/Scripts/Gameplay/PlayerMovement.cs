@@ -13,6 +13,7 @@ namespace kingcrimson.gameplay
         [SerializeField] private AK.Wwise.Switch m_footstepNormalSwitch, m_footstepSlowSwitch;
 
         private bool m_isSoundPlaying;
+        [SerializeField] private Animator m_spriteAnimator;
 
 
         private Rigidbody2D m_rigidbody;
@@ -30,6 +31,7 @@ namespace kingcrimson.gameplay
             {
                 dir += Vector2.up;
             }
+            
 
             if (Input.GetKey(KeyCode.S))
             {
@@ -55,6 +57,16 @@ namespace kingcrimson.gameplay
 
             Vector2 displacement = dir * m_speed;
             Vector3 newPos = transform.position + Time.fixedDeltaTime * new Vector3(displacement.x, displacement.y);
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+    
+            if (angle < 0)
+            {
+                angle += 360;
+            }
+
+            m_spriteAnimator.SetFloat("Speed", displacement.magnitude);
+            m_spriteAnimator.SetFloat("Dir", angle);
+
 
             if (displacement.sqrMagnitude > 0.1f)
             {
