@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8995119456851962328}
   - component: {fileID: 3115274073431998932}
+  - component: {fileID: 2632026929646584316}
   m_Layer: 6
   m_Name: Triangle
   m_TagString: Untagged
@@ -70,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 442258579
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 540147370, guid: 0d767747196120b449a72494ac8b3b33, type: 3}
+  m_Sprite: {fileID: 940062518, guid: 06e641327b9f62a42996a982b99a3786, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2632026929646584316
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047250279155821315}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30e7f2aa55e1a7f4384a4673194d15f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6700262974860368572
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
+  m_gameTime: {fileID: 0}
   Speed: 0
   MeleeAttackPrefab: {fileID: 0}
   RangedAttackPrefab: {fileID: 0}
