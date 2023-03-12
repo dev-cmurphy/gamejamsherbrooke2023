@@ -53,7 +53,6 @@ namespace kingcrimson.gameplay
                 float value = 100 - scaleFactor;
 
                 value = Mathf.Clamp(value, 0, Mathf.Sqrt(value));
-                Debug.Log($"Setting aura music value to {value}");
                 m_rtpcMusique.SetValue(gameObject, value);
                 m_tickTimer += Time.fixedDeltaTime;
 
