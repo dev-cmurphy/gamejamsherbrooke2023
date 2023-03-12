@@ -5,8 +5,6 @@ namespace kingcrimson.gameplay
 {
     public class Game : MonoBehaviour
     {
-        // Points de wokeness perdus par tick
-        [SerializeField] private float m_wokenessDecayPerTick;
 
         [SerializeField] private GameTime m_gameTime;
         [SerializeField] private Player m_player;
@@ -18,8 +16,6 @@ namespace kingcrimson.gameplay
 
         private void Start()
         {
-            m_gameTime.OnNewMinute.AddListener(ReducePlayerWokeness);
-
             m_state = m_introState;
             m_introState.Init(this);
         }
@@ -32,13 +28,6 @@ namespace kingcrimson.gameplay
         private void FixedUpdate()
         {
             m_state = m_state.HandleContext();
-        }
-
-        private void ReducePlayerWokeness(int _)
-        {
-            float loss = m_wokenessDecayPerTick;
-
-            m_player.ReduceWokeness(loss);
         }
     }
 }

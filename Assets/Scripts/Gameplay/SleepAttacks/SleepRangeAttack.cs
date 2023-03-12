@@ -24,7 +24,6 @@ namespace kingcrimson.gameplay
         [SerializeField] private GameObject m_instantiateOnDestruction;
 
         private bool m_isActive;
-        private bool m_isOver;
 
         private Animator m_animator;
 
@@ -42,7 +41,6 @@ namespace kingcrimson.gameplay
         public void MarkAsDone()
         {
             m_travelStopEvent.Post(gameObject);
-            m_isOver = true;
         }
 
         private IEnumerator GoToTarget(Transform target)
@@ -72,7 +70,6 @@ namespace kingcrimson.gameplay
         {
             Debug.Log("Preparing range attack...");
             m_isActive = false;
-            m_isOver = false;
             transform.position = m_owner.transform.position;
         }
 
