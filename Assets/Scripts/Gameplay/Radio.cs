@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace kingcrimson.gameplay
 {
@@ -11,6 +12,8 @@ namespace kingcrimson.gameplay
 
         [SerializeField] private AK.Wwise.Event m_playRadioEvent, m_stopRadioEvent;
 
+        [SerializeField] private Slider m_slider;
+
         private float m_currentBattery;
         private bool m_inUse;
 
@@ -18,6 +21,8 @@ namespace kingcrimson.gameplay
         {
             m_currentBattery = m_maxBattery;
             m_inUse = false;
+            m_slider.gameObject.SetActive(false);
+            m_slider.maxValue = m_maxBattery;
         }
 
         private void FixedUpdate()
@@ -26,12 +31,16 @@ namespace kingcrimson.gameplay
             {
                 if (m_inUse && m_currentBattery > 0)
                 {
+                    m_slider.gameObject.SetActive(true);
                     m_currentBattery -= m_batteryDecayRate * Time.fixedDeltaTime;
+
+                    m_slider.value = m_currentBattery;
 
                     if (m_currentBattery <= 0)
                     {
                         m_inUse = false;
                         m_currentBattery = 0;
+                        m_stopRadioEvent.Post(gameObject);
                     }
                 }
             }
