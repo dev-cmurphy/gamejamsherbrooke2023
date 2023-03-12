@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da9143131140e184f8edd01ef4584ec5, type: 3}
-  m_Name: 6B186003-5C41-4932-9F7F-3D3267A10AAA
+  m_Script: {fileID: 11500000, guid: 34692285710be344086f22317cd3dcef, type: 3}
+  m_Name: D3561C5E-29E7-4623-90A6-67E095C94536
   m_EditorClassIdentifier: 
-  objectName: Play_Stinger_Loose
-  id: 2397718343
-  guid: 6B186003-5C41-4932-9F7F-3D3267A10AAA
+  objectName: Music
+  id: 3991942870
+  guid: D3561C5E-29E7-4623-90A6-67E095C94536

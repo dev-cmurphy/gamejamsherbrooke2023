@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Gameplay;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +11,7 @@ namespace kingcrimson.gameplay
         [SerializeField] private float m_batteryDecayRate;
         [SerializeField] private GameTime m_gameTime;
 
-        [SerializeField] private AK.Wwise.Event m_playRadioEvent, m_stopRadioEvent;
-
+        [SerializeField] private AK.Wwise.Event m_playMusicEvent;
         [SerializeField] private Slider m_slider;
 
         [SerializeField] private ParticleSystem notes;
@@ -44,7 +44,7 @@ namespace kingcrimson.gameplay
                         notes.Stop();
                         m_inUse = false;
                         m_currentBattery = 0;
-                        m_stopRadioEvent.Post(gameObject);
+                        MusicStateManager.TurnOffRadio();
                     }
                 }
             }
@@ -61,6 +61,9 @@ namespace kingcrimson.gameplay
             {
                 if (m_currentBattery > 0)
                 {
+                    if (!MusicStateManager.HasStarted)
+                        m_playMusicEvent.Post(this.gameObject);
+
                     StartCoroutine(PlayCoroutine());
                 }
             }
@@ -68,7 +71,7 @@ namespace kingcrimson.gameplay
 
         private IEnumerator PlayCoroutine()
         {
-            m_playRadioEvent.Post(gameObject);
+            MusicStateManager.TurnOnRadio();
             yield return new WaitForSeconds(0.34f);
             notes.Play();
             m_inUse = true;
@@ -77,7 +80,8 @@ namespace kingcrimson.gameplay
         public void Stop()
         {
             m_inUse = false;
-            m_stopRadioEvent.Post(gameObject);
+            AkSoundEngine.SetState("Music", "Silence");
+            MusicStateManager.TurnOffRadio();
             notes.Stop();
         }
     }

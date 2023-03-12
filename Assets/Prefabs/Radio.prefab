@@ -53,11 +53,17 @@ MonoBehaviour:
   m_playRadioEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f598f91cb189d984988851594492524a, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: e4a4014ad6cc8a3468d7f4b982049aea, type: 2}
   m_stopRadioEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6f827707793177240ae7894d572cdd7c, type: 2}
+  m_radioState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6c3ba625bd3912e4b963ff75cffce3d3, type: 2}
   m_slider: {fileID: 0}
   notes: {fileID: 5933721728797335888}
 --- !u!61 &6647295020219200943

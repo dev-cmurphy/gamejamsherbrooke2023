@@ -108,15 +108,11 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 0a94b8f5c9b262341af7634deb4af9ad, type: 2}
-  m_musicStartEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e1be037bff697864ca10da0f43e5282a, type: 2}
-  m_musicStopEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f8e1a1643e23ecc4b82b2197833d2bb0, type: 2}
   m_auraTransform: {fileID: 610319164639325066}
+  m_auraEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e4a4014ad6cc8a3468d7f4b982049aea, type: 2}
 --- !u!50 &3837802584652778618
 Rigidbody2D:
   serializedVersion: 4

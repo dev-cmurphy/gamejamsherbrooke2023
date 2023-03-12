@@ -435,7 +435,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a4f8f7b92f9e144b9338ce005b191b8c
     GuidInternal: 
-    m_lastTime: -8585230144660242131
+    m_lastTime: -8585229630864081118
     List:
     - name: Game_Jam
       guid: ccbd2afda5dca04b8e24410814a9381a
@@ -510,7 +510,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c5670d334d55d946a1d0d630dcc457c7
     GuidInternal: 
-    m_lastTime: -8585230144816258139
+    m_lastTime: -8585229635235732071
     List: []
   - PhysicalPath: Events\Interface.wwu
     PathAndIcons:
@@ -610,6 +610,36 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 9.000021
       minDuration: 9.000021
+  - PhysicalPath: Events\Music_Aura.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music_Aura
+      ObjectType: 12
+      guid: 308405fca5a25e4e8c1c25755b6b625c
+    ParentPath: Events\Music_Aura
+    guid: 308405fca5a25e4e8c1c25755b6b625c
+    GuidInternal: 
+    m_lastTime: -8585229674963637139
+    List:
+    - name: Play_Music
+      guid: 2ed69e97b941b941a86ca2aa1a860959
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music_Aura
+        ObjectType: 12
+        guid: 308405fca5a25e4e8c1c25755b6b625c
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 2ed69e97b941b941a86ca2aa1a860959
+      Path: Events\Music_Aura\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Musique.wwu
     PathAndIcons:
     - ElementName: Events
@@ -621,25 +651,8 @@ MonoBehaviour:
     ParentPath: Events\Musique
     guid: 28f77c32f6b2834089dbd9a11f9015e8
     GuidInternal: 
-    m_lastTime: -8585230144815618251
+    m_lastTime: -8585229633793719882
     List:
-    - name: Play_Stinger_Loose
-      guid: 0360186b415c32499f7f3d3267a10aaa
-      id: 2397718343
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Musique
-        ObjectType: 12
-        guid: 28f77c32f6b2834089dbd9a11f9015e8
-      - ElementName: Play_Stinger_Loose
-        ObjectType: 3
-        guid: 0360186b415c32499f7f3d3267a10aaa
-      Path: Events\Musique\Play_Stinger_Loose
-      maxAttenuation: 0
-      maxDuration: 12.500021
-      minDuration: 12.500021
     - name: Play_Stinger_Win
       guid: 510330624d7b6240ac3195199910c35d
       id: 470132223
@@ -657,87 +670,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 11.000021
       minDuration: 11.000021
-  - PhysicalPath: Events\Musique-Aura.wwu
-    PathAndIcons:
-    - ElementName: Events
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Musique-Aura
-      ObjectType: 12
-      guid: fe42378a7560b44aad02f1cc47228b17
-    ParentPath: Events\Musique-Aura
-    guid: fe42378a7560b44aad02f1cc47228b17
-    GuidInternal: 
-    m_lastTime: -8585230144815258289
-    List:
-    - name: Play_Musique_Classique
-      guid: 9691abb6385e5a42945ee0270b6c5b9e
-      id: 645075914
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Musique-Aura
-        ObjectType: 12
-        guid: fe42378a7560b44aad02f1cc47228b17
-      - ElementName: Play_Musique_Classique
-        ObjectType: 3
-        guid: 9691abb6385e5a42945ee0270b6c5b9e
-      Path: Events\Musique-Aura\Play_Musique_Classique
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Radio
-      guid: 6d3d98d6e1cbc1438b16878a7fc51256
-      id: 2953849999
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Musique-Aura
-        ObjectType: 12
-        guid: fe42378a7560b44aad02f1cc47228b17
-      - ElementName: Play_Radio
-        ObjectType: 3
-        guid: 6d3d98d6e1cbc1438b16878a7fc51256
-      Path: Events\Musique-Aura\Play_Radio
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Radio_Stop
-      guid: 636aa904ad14ea469e6ee20ec902b161
-      id: 2842224570
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Musique-Aura
-        ObjectType: 12
-        guid: fe42378a7560b44aad02f1cc47228b17
-      - ElementName: Play_Radio_Stop
-        ObjectType: 3
-        guid: 636aa904ad14ea469e6ee20ec902b161
-      Path: Events\Musique-Aura\Play_Radio_Stop
-      maxAttenuation: 0
-      maxDuration: 1.410162
-      minDuration: 1.410162
-    - name: Stop_Musique_Classique
-      guid: a51f97b503323e40999b696c897e294c
-      id: 1128779488
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Musique-Aura
-        ObjectType: 12
-        guid: fe42378a7560b44aad02f1cc47228b17
-      - ElementName: Stop_Musique_Classique
-        ObjectType: 3
-        guid: a51f97b503323e40999b696c897e294c
-      Path: Events\Musique-Aura\Stop_Musique_Classique
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -749,8 +681,25 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: 86e472e9ab967d4db1a7cbd1848344a9
     GuidInternal: 
-    m_lastTime: -8585230144814838273
+    m_lastTime: -8585229633840143085
     List:
+    - name: Play_Player_Death
+      guid: f28ae159ec119d4783f1e9c614718cb9
+      id: 1835085974
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: 86e472e9ab967d4db1a7cbd1848344a9
+      - ElementName: Play_Player_Death
+        ObjectType: 3
+        guid: f28ae159ec119d4783f1e9c614718cb9
+      Path: Events\Player\Play_Player_Death
+      maxAttenuation: 0
+      maxDuration: 12.500021
+      minDuration: 12.500021
     - name: Play_Player_Footsteps
       guid: 58c76d51a476984cae0aad3810873e39
       id: 98439365
@@ -878,7 +827,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9ed07cbd0946054aa8c1699c0f4534d9
     GuidInternal: 
-    m_lastTime: -8585230144814098268
+    m_lastTime: -8585229689483882501
     List:
     - name: Attenuation_Classique
       guid: 2e0b4a3c3fccfd4cb784dfec4c85bc10
@@ -894,6 +843,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 2e0b4a3c3fccfd4cb784dfec4c85bc10
       Path: Game Parameters\Default Work Unit\Attenuation_Classique
+    - name: Crossfade
+      guid: 73e455614f5ad14eac40f2af0c1a6648
+      id: 1369808713
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9ed07cbd0946054aa8c1699c0f4534d9
+      - ElementName: Crossfade
+        ObjectType: 13
+        guid: 73e455614f5ad14eac40f2af0c1a6648
+      Path: Game Parameters\Default Work Unit\Crossfade
     - name: Sleepness_meter
       guid: 0b23a51bed1f2b4a8cda76af22c5e6c4
       id: 3583923761
@@ -1114,8 +1077,90 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: b8f1fa198795364591e7b6530ac42c39
     GuidInternal: 
-    m_lastTime: -8585230144659462126
-    List: []
+    m_lastTime: -8585229689483912509
+    List:
+    - name: Music
+      guid: 5e1c56d3e729234690a667e095c94536
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b8f1fa198795364591e7b6530ac42c39
+      - ElementName: Music
+        ObjectType: 9
+        guid: 5e1c56d3e729234690a667e095c94536
+      Path: States\Default Work Unit\Music
+      values:
+      - name: Classique
+        guid: ba43800108953c4ebf004734001b93ca
+        id: 4221898911
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b8f1fa198795364591e7b6530ac42c39
+        - ElementName: Music
+          ObjectType: 9
+          guid: 5e1c56d3e729234690a667e095c94536
+        - ElementName: Classique
+          ObjectType: 8
+          guid: ba43800108953c4ebf004734001b93ca
+      - name: None
+        guid: 71fdf7260a0e334ea87021eca0a5fb5b
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b8f1fa198795364591e7b6530ac42c39
+        - ElementName: Music
+          ObjectType: 9
+          guid: 5e1c56d3e729234690a667e095c94536
+        - ElementName: None
+          ObjectType: 8
+          guid: 71fdf7260a0e334ea87021eca0a5fb5b
+      - name: Rock
+        guid: 506cfdf1c5000845874c3289cd59376e
+        id: 2144363834
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b8f1fa198795364591e7b6530ac42c39
+        - ElementName: Music
+          ObjectType: 9
+          guid: 5e1c56d3e729234690a667e095c94536
+        - ElementName: Rock
+          ObjectType: 8
+          guid: 506cfdf1c5000845874c3289cd59376e
+      - name: Silence
+        guid: c810a382eb53544098a9b1bc6bcffbc1
+        id: 3041563226
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b8f1fa198795364591e7b6530ac42c39
+        - ElementName: Music
+          ObjectType: 9
+          guid: 5e1c56d3e729234690a667e095c94536
+        - ElementName: Silence
+          ObjectType: 8
+          guid: c810a382eb53544098a9b1bc6bcffbc1
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1195,8 +1240,8 @@ MonoBehaviour:
     m_lastTime: -8585230144658732126
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 090000000a0000000e0000000f00000015000000190000001d00000027000000280000002a0000002b0000002c000000
-  AutoSyncSelection: 0
+  ExpandedWaapiItemIds: 0100000002000000030000000400000007000000090000000a0000000b0000000c0000000e0000000f000000100000001100000015000000160000001700000018000000190000001b0000001c0000001d0000001f00000020000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000035000000380000004c0000004d000000510000006b0000006c0000007000000076000000780000007b0000007f0000009b0000009c000000b1000000b2000000c7000000c8000000f1000000f30000000201000003010000070100000a010000
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Gameplay;
+using System.Collections;
 using UnityEngine;
 
 namespace kingcrimson.gameplay
@@ -13,9 +14,9 @@ namespace kingcrimson.gameplay
 
         [SerializeField] private AK.Wwise.RTPC m_rtpcMusique;
 
-        [SerializeField] protected AK.Wwise.Event m_musicStartEvent, m_musicStopEvent;
-
         [SerializeField] private Transform m_auraTransform;
+
+        [SerializeField] private AK.Wwise.Event m_auraEvent;
 
 
         private bool m_isActive;
@@ -42,13 +43,19 @@ namespace kingcrimson.gameplay
         }
         public override IEnumerator Execute()
         {
-            m_musicStartEvent.Post(gameObject);
             m_animator.SetTrigger("StartAttack");
+            
+            if (!MusicStateManager.HasStarted)
+            {
+                m_auraEvent.Post(this.gameObject);
+            }
+
+            MusicStateManager.TurnOnAura();
             while (!m_isOver)
             {
                 // 100: diminué full
                 // 0 full son
-
+                
                 float scaleFactor = m_auraTransform.localScale.x * 10;
                 float value = 100 - scaleFactor;
 
@@ -65,9 +72,9 @@ namespace kingcrimson.gameplay
                 yield return new WaitForFixedUpdate();
             }
 
-            m_isActive = false;
 
-            m_musicStopEvent.Post(gameObject);
+            MusicStateManager.TurnOffAura();
+            m_isActive = false;
             Destroy(this.gameObject);
         }
 

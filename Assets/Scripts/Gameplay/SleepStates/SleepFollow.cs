@@ -11,8 +11,11 @@ namespace kingcrimson.gameplay
 
         public Animator Animator;
 
+        private float m_globalCoolDownModifier;
+
         public SleepFollow(Sleep owner) : base(owner)
         {
+            m_globalCoolDownModifier = 1.0f;
             m_lastMeleeTime = -10;
             m_lastRangeTime = 0;
             m_lastAuraTime = 0;
@@ -22,6 +25,9 @@ namespace kingcrimson.gameplay
         {
             Vector3 displacement = context.Player.transform.position - m_owner.transform.position;
 
+            m_owner.Speed += context.DeltaTime * 0.05f;
+            m_globalCoolDownModifier -= context.DeltaTime * 0.05f;
+            m_globalCoolDownModifier = Mathf.Clamp(m_globalCoolDownModifier, 0.3f, 1f);
             float now = Time.time;
             if (ShouldMelee(displacement))
             {
@@ -54,7 +60,7 @@ namespace kingcrimson.gameplay
 
         private bool ShouldAura(float now)
         {
-            if ((now - m_lastAuraTime) > 30)
+            if ((now - m_lastAuraTime) > 30 * m_globalCoolDownModifier)
             {
                 return true;
             }
@@ -64,7 +70,7 @@ namespace kingcrimson.gameplay
 
         private bool ShouldMelee(Vector3 playerDistance)
         {
-            if (playerDistance.magnitude < 5 && (Time.time - m_lastMeleeTime) > 5)
+            if (playerDistance.magnitude < 5 && (Time.time - m_lastMeleeTime) > 5 * m_globalCoolDownModifier)
             {
                 return true;
             }
@@ -75,7 +81,7 @@ namespace kingcrimson.gameplay
         private bool ShouldRange(Vector3 playerDistance)
         {
             float d = playerDistance.magnitude;
-            if (d < 15 && d > 5 && (Time.time - m_lastRangeTime) > 10)
+            if (d < 15 && d > 5 && (Time.time - m_lastRangeTime) > 15 * m_globalCoolDownModifier)
             {
                 return true;
             }

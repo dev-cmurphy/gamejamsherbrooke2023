@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace kingcrimson.gameplay
 {
@@ -12,7 +13,10 @@ namespace kingcrimson.gameplay
 
         [SerializeField] private AK.Wwise.RTPC m_wokenessRTPC;
 
+        [SerializeField] private AK.Wwise.Event m_hitEvent;
+
         [SerializeField] private Animator m_FOVAnimator;
+        [SerializeField] private Image m_key;
 
         private float m_wokeness;
 
@@ -77,6 +81,7 @@ namespace kingcrimson.gameplay
             if (collision.TryGetComponent(out Radio radio))
             {
                 m_radio = radio;
+                m_key.gameObject.SetActive(true);
                 // OnRadioObtained ?
                 m_radio.transform.parent = this.transform;
                 m_radio.transform.localPosition = Vector2.left * 0.2f;
@@ -95,6 +100,7 @@ namespace kingcrimson.gameplay
 
             m_wokeness = Mathf.Clamp(m_wokeness, 0, m_maxWokeness);
 
+            m_hitEvent.Post(this.gameObject);
             OnWokenessChange.Invoke(m_wokeness, amount);
 
             m_wokenessRTPC.SetValue(gameObject, 100 * (1 - (m_wokeness / m_maxWokeness)));
