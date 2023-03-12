@@ -2965,6 +2965,14 @@ PrefabInstance:
       propertyPath: m_timeAnimator
       value: 
       objectReference: {fileID: 1242808247}
+    - target: {fileID: 4932231493376362517, guid: ea85d9442c0b8414eb574c8361ab3f3a, type: 3}
+      propertyPath: m_hideTimeEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e0cbb5a258e69b49b525f0b8fc58cb7, type: 2}
+    - target: {fileID: 4932231493376362517, guid: ea85d9442c0b8414eb574c8361ab3f3a, type: 3}
+      propertyPath: m_showTimeEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 43df51cef5490974bad385e6075b168e, type: 2}
     - target: {fileID: 4932231493376362519, guid: ea85d9442c0b8414eb574c8361ab3f3a, type: 3}
       propertyPath: m_player
       value: 
@@ -5042,7 +5050,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.862
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 0.24
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 93545c1a213dd455
@@ -5093,7 +5101,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 3.49
+  m_PointLightOuterRadius: 3.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -6996,6 +7004,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1816651657603342908, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424054613863218899, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424054613863218899, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424054613863218899, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424054613863218899, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424054613863218899, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 168.65628
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424054613863218899, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80.48779
+      objectReference: {fileID: 0}
     - target: {fileID: 4705447448180892027, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7007,6 +7043,14 @@ PrefabInstance:
     - target: {fileID: 4705447448180892027, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705447448773164513, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705447448773164513, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4705447448773164518, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -7167,6 +7211,26 @@ PrefabInstance:
     - target: {fileID: 4705447449938526587, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_fontSize
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.42745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 1855138598
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6357991477883332886, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
       propertyPath: m_AnchorMax.x

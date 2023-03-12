@@ -13,6 +13,7 @@ namespace kingcrimson.ui
         [SerializeField] private Player m_player;
 
         [SerializeField] private Image m_barFill;
+        [SerializeField] private Animator m_barAnimator;
 
 
         private void Awake()
@@ -31,6 +32,11 @@ namespace kingcrimson.ui
         private void UpdateWokenessBar(float total, float change)
         {
             m_wokenessBar.value = total;
+
+            if (change > 0.5f)
+            {
+                m_barAnimator.SetTrigger("Flash");
+            }
         }
 
         private IEnumerator WokebarFlash()
@@ -40,14 +46,16 @@ namespace kingcrimson.ui
                 float flashDuration = m_wokenessBar.value / (m_wokenessBar.maxValue - 1);
                 if (flashDuration < 1)
                 {
+                    flashDuration = Mathf.Clamp(flashDuration, 0.2f, 1f) * 4f;
+
                     Color c = m_barFill.color;
                     c.a = 0;
                     m_barFill.color = c;
-                    yield return new WaitForSeconds(flashDuration * 0.25f);
+                    yield return new WaitForSeconds(flashDuration * 0.1f);
 
                     c.a = 1;
                     m_barFill.color = c;
-                    yield return new WaitForSeconds(flashDuration * 0.75f);
+                    yield return new WaitForSeconds(flashDuration * 0.9f);
                 }
                 else
                 {
