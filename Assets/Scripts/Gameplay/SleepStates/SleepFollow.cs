@@ -9,6 +9,8 @@ namespace kingcrimson.gameplay
 
         private float m_lastAuraTime;
 
+        public Animator Animator;
+
         public SleepFollow(Sleep owner) : base(owner)
         {
             m_lastMeleeTime = -10;
@@ -23,18 +25,21 @@ namespace kingcrimson.gameplay
             float now = Time.time;
             if (ShouldMelee(displacement))
             {
+                Animator.SetTrigger("Summon");
                 m_lastMeleeTime = now;
                 return new SleepMelee(this, m_owner);
             }
 
             if (ShouldAura(now))
             {
+                Animator.SetTrigger("Summon");
                 m_lastAuraTime = now;
                 return new SleepAura(this, m_owner);
             }
 
             if (ShouldRange(displacement))
             {
+                Animator.SetTrigger("SandAttack");
                 m_lastRangeTime = now;
                 return new SleepRange(this, m_owner);
             }

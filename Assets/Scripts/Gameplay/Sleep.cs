@@ -9,6 +9,8 @@ namespace kingcrimson.gameplay
         [SerializeField] private Player m_player;
         [SerializeField] private GameTime m_gameTime;
 
+        [SerializeField] private Animator m_animator;
+
         [Min(0f)]
         public float Speed;
 
@@ -32,7 +34,12 @@ namespace kingcrimson.gameplay
         {
             m_context.Player = m_player;
 
-            m_state = new SleepFollow(this);
+            var follow = new SleepFollow(this)
+            {
+                Animator = m_animator
+            };
+            m_state = follow;
+        
         }
 
         private void FixedUpdate()

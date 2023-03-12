@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 namespace kingcrimson.gameplay
 {
@@ -61,6 +62,11 @@ namespace kingcrimson.gameplay
         }
         public override IEnumerator Execute()
         {
+            for (float t = 0; t < 1; t += Time.fixedDeltaTime)
+            {
+                transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, t);
+                yield return new WaitForFixedUpdate();
+            }
             StartCoroutine(GoToTarget(m_target.transform));
 
             yield return null;
