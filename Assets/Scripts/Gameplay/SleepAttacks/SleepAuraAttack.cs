@@ -95,8 +95,8 @@ namespace kingcrimson.gameplay
                     if (collision.TryGetComponent(out Player p))
                     {
                         ApplyEffect(p);
+                        m_tickReady = false;
                     }
-                    m_tickReady = false;
                 }
             }
         }

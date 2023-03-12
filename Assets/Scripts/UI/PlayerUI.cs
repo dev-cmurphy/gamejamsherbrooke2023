@@ -33,7 +33,7 @@ namespace kingcrimson.ui
         {
             m_wokenessBar.value = total;
 
-            if (change > 0.5f)
+            if (change > 0.1f)
             {
                 m_barAnimator.SetTrigger("Flash");
             }

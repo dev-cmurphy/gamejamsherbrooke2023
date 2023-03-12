@@ -102,8 +102,8 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  m_damagePerTick: 0.1
-  m_tickPerSecond: 5
+  m_damagePerTick: 0.5
+  m_tickPerSecond: 2
   m_rtpcMusique:
     idInternal: 0
     valueGuidInternal: 
