@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 747f52cd279ff042968001e4373f55c2
     GuidInternal: 
-    m_lastTime: -8585230398067056847
+    m_lastTime: -8585230144649052091
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585230398066743173
+    m_lastTime: -8585230144648732090
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 19da401b5c58b042892636e1d9783e99
     GuidInternal: 
-    m_lastTime: -8585230398162588671
+    m_lastTime: -8585230144782025770
     List:
     - name: Ambiance
       guid: da4ec861b8b540498d126d38b4de41fe
@@ -336,6 +336,20 @@ MonoBehaviour:
         ObjectType: 2
         guid: 1168f5160f8e194f9028dccfb13c073c
       Path: Master-Mixer Hierarchy\Default Work Unit\Musique-Aura\Classique
+    - name: Interface
+      guid: 9ca54ac2d0196641b479d66945246ff8
+      id: 1088520938
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 19da401b5c58b042892636e1d9783e99
+      - ElementName: Interface
+        ObjectType: 2
+        guid: 9ca54ac2d0196641b479d66945246ff8
+      Path: Master-Mixer Hierarchy\Default Work Unit\Interface
     - name: Musique-Aura
       guid: 6a153402d95cf84b86b0397d7540bf6a
       id: 2803921466
@@ -421,10 +435,10 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a4f8f7b92f9e144b9338ce005b191b8c
     GuidInternal: 
-    m_lastTime: -8585230387393346073
+    m_lastTime: -8585230144660242131
     List:
     - name: Game_Jam
-      guid: 4dc2ba31bd123b40ad6727ba6cbd73cb
+      guid: ccbd2afda5dca04b8e24410814a9381a
       id: 3958415146
       PathAndIcons:
       - ElementName: SoundBanks
@@ -435,7 +449,7 @@ MonoBehaviour:
         guid: a4f8f7b92f9e144b9338ce005b191b8c
       - ElementName: Game_Jam
         ObjectType: 7
-        guid: 4dc2ba31bd123b40ad6727ba6cbd73cb
+        guid: ccbd2afda5dca04b8e24410814a9381a
       Path: SoundBanks\Default Work Unit\Game_Jam
   EventWwu:
   - PhysicalPath: Events\Ambiance.wwu
@@ -449,7 +463,7 @@ MonoBehaviour:
     ParentPath: Events\Ambiance
     guid: 7b5f18ddf880fd4fb216c6c03f12216c
     GuidInternal: 
-    m_lastTime: -8585230398167868662
+    m_lastTime: -8585230144816568287
     List:
     - name: Play_Ambiance
       guid: 1ff6757e19745c459547517eb729bd53
@@ -496,8 +510,106 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c5670d334d55d946a1d0d630dcc457c7
     GuidInternal: 
-    m_lastTime: -8585230398167388674
+    m_lastTime: -8585230144816258139
     List: []
+  - PhysicalPath: Events\Interface.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Interface
+      ObjectType: 12
+      guid: 81444069317bcf4fa033a014bb137365
+    ParentPath: Events\Interface
+    guid: 81444069317bcf4fa033a014bb137365
+    GuidInternal: 
+    m_lastTime: -8585230144815948259
+    List:
+    - name: Play_Afficher
+      guid: fab11ef4d6209247b5444b16aff78589
+      id: 2946775804
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 81444069317bcf4fa033a014bb137365
+      - ElementName: Play_Afficher
+        ObjectType: 3
+        guid: fab11ef4d6209247b5444b16aff78589
+      Path: Events\Interface\Play_Afficher
+      maxAttenuation: 0
+      maxDuration: 0.426167
+      minDuration: 0.426167
+    - name: Play_Cacher
+      guid: 3d3ab1ea4b7e194abe94e70f6f48779e
+      id: 1864267430
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 81444069317bcf4fa033a014bb137365
+      - ElementName: Play_Cacher
+        ObjectType: 3
+        guid: 3d3ab1ea4b7e194abe94e70f6f48779e
+      Path: Events\Interface\Play_Cacher
+      maxAttenuation: 0
+      maxDuration: 0.426167
+      minDuration: 0.426167
+    - name: Play_Pickup_Radio
+      guid: 5d8932e068711f419060b2ea982b6c4b
+      id: 3171191222
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 81444069317bcf4fa033a014bb137365
+      - ElementName: Play_Pickup_Radio
+        ObjectType: 3
+        guid: 5d8932e068711f419060b2ea982b6c4b
+      Path: Events\Interface\Play_Pickup_Radio
+      maxAttenuation: 0
+      maxDuration: 0.812479
+      minDuration: 0.812479
+    - name: Play_Play_Game
+      guid: 162a20ebfc1c0b4b815cc78a0942655a
+      id: 3442970541
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 81444069317bcf4fa033a014bb137365
+      - ElementName: Play_Play_Game
+        ObjectType: 3
+        guid: 162a20ebfc1c0b4b815cc78a0942655a
+      Path: Events\Interface\Play_Play_Game
+      maxAttenuation: 0
+      maxDuration: 2.67325
+      minDuration: 2.67325
+    - name: Play_Restez_Eveille
+      guid: 05950e3c9968b64d8c6373033fdedba3
+      id: 3807011032
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 81444069317bcf4fa033a014bb137365
+      - ElementName: Play_Restez_Eveille
+        ObjectType: 3
+        guid: 05950e3c9968b64d8c6373033fdedba3
+      Path: Events\Interface\Play_Restez_Eveille
+      maxAttenuation: 0
+      maxDuration: 9.000021
+      minDuration: 9.000021
   - PhysicalPath: Events\Musique.wwu
     PathAndIcons:
     - ElementName: Events
@@ -509,7 +621,7 @@ MonoBehaviour:
     ParentPath: Events\Musique
     guid: 28f77c32f6b2834089dbd9a11f9015e8
     GuidInternal: 
-    m_lastTime: -8585230349394856507
+    m_lastTime: -8585230144815618251
     List:
     - name: Play_Stinger_Loose
       guid: 0360186b415c32499f7f3d3267a10aaa
@@ -528,6 +640,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 12.500021
       minDuration: 12.500021
+    - name: Play_Stinger_Win
+      guid: 510330624d7b6240ac3195199910c35d
+      id: 470132223
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Musique
+        ObjectType: 12
+        guid: 28f77c32f6b2834089dbd9a11f9015e8
+      - ElementName: Play_Stinger_Win
+        ObjectType: 3
+        guid: 510330624d7b6240ac3195199910c35d
+      Path: Events\Musique\Play_Stinger_Win
+      maxAttenuation: 0
+      maxDuration: 11.000021
+      minDuration: 11.000021
   - PhysicalPath: Events\Musique-Aura.wwu
     PathAndIcons:
     - ElementName: Events
@@ -539,7 +668,7 @@ MonoBehaviour:
     ParentPath: Events\Musique-Aura
     guid: fe42378a7560b44aad02f1cc47228b17
     GuidInternal: 
-    m_lastTime: -8585230398166768671
+    m_lastTime: -8585230144815258289
     List:
     - name: Play_Musique_Classique
       guid: 9691abb6385e5a42945ee0270b6c5b9e
@@ -620,11 +749,11 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: 86e472e9ab967d4db1a7cbd1848344a9
     GuidInternal: 
-    m_lastTime: -8585230398166458677
+    m_lastTime: -8585230144814838273
     List:
-    - name: Play_Footsteps
-      guid: 3a13531f5c7c61478078bb833641edad
-      id: 3854155799
+    - name: Play_Player_Footsteps
+      guid: 58c76d51a476984cae0aad3810873e39
+      id: 98439365
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -632,10 +761,10 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 12
         guid: 86e472e9ab967d4db1a7cbd1848344a9
-      - ElementName: Play_Footsteps
+      - ElementName: Play_Player_Footsteps
         ObjectType: 3
-        guid: 3a13531f5c7c61478078bb833641edad
-      Path: Events\Player\Play_Footsteps
+        guid: 58c76d51a476984cae0aad3810873e39
+      Path: Events\Player\Play_Player_Footsteps
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -656,9 +785,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.297996
       minDuration: 2.087198
-    - name: Stop_Footsteps
-      guid: db6a5f4af0051b45b60fe6bd2b5994b2
-      id: 2963349357
+    - name: Stop_Player_Footsteps
+      guid: defdc6220ec0224e9c242da950307ea5
+      id: 2284278951
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -666,10 +795,10 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 12
         guid: 86e472e9ab967d4db1a7cbd1848344a9
-      - ElementName: Stop_Footsteps
+      - ElementName: Stop_Player_Footsteps
         ObjectType: 3
-        guid: db6a5f4af0051b45b60fe6bd2b5994b2
-      Path: Events\Player\Stop_Footsteps
+        guid: defdc6220ec0224e9c242da950307ea5
+      Path: Events\Player\Stop_Player_Footsteps
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -684,7 +813,7 @@ MonoBehaviour:
     ParentPath: Events\SandMan
     guid: e0d6028647fa9b42927965d4dce610f2
     GuidInternal: 
-    m_lastTime: -8585230398166018664
+    m_lastTime: -8585230144814498283
     List:
     - name: Play_Bed_Attacks
       guid: 1c65178890e9d345a4946f3931a6c070
@@ -749,7 +878,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 9ed07cbd0946054aa8c1699c0f4534d9
     GuidInternal: 
-    m_lastTime: -8585230398165608668
+    m_lastTime: -8585230144814098268
     List:
     - name: Attenuation_Classique
       guid: 2e0b4a3c3fccfd4cb784dfec4c85bc10
@@ -790,7 +919,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8585230398165298679
+    m_lastTime: -8585230144813778275
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -831,7 +960,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585230398164578589
+    m_lastTime: -8585230144813448282
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -985,74 +1114,8 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: b8f1fa198795364591e7b6530ac42c39
     GuidInternal: 
-    m_lastTime: -8585230398076803490
-    List:
-    - name: PlayerWokeness
-      guid: 0f3a8271c351ab4383149abea0f610fc
-      id: 2298559033
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: b8f1fa198795364591e7b6530ac42c39
-      - ElementName: PlayerWokeness
-        ObjectType: 9
-        guid: 0f3a8271c351ab4383149abea0f610fc
-      Path: States\Default Work Unit\PlayerWokeness
-      values:
-      - name: Asleep
-        guid: 6bb2cbc68b2f2748875dd394f3230b17
-        id: 3778954319
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: b8f1fa198795364591e7b6530ac42c39
-        - ElementName: PlayerWokeness
-          ObjectType: 9
-          guid: 0f3a8271c351ab4383149abea0f610fc
-        - ElementName: Asleep
-          ObjectType: 8
-          guid: 6bb2cbc68b2f2748875dd394f3230b17
-      - name: None
-        guid: 5f1b09a338e1c9408b49c14b53c3a47a
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: b8f1fa198795364591e7b6530ac42c39
-        - ElementName: PlayerWokeness
-          ObjectType: 9
-          guid: 0f3a8271c351ab4383149abea0f610fc
-        - ElementName: None
-          ObjectType: 8
-          guid: 5f1b09a338e1c9408b49c14b53c3a47a
-      - name: Woke
-        guid: 2830fb6f177c3e46af51f2eb42b46452
-        id: 2125160287
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: b8f1fa198795364591e7b6530ac42c39
-        - ElementName: PlayerWokeness
-          ObjectType: 9
-          guid: 0f3a8271c351ab4383149abea0f610fc
-        - ElementName: Woke
-          ObjectType: 8
-          guid: 2830fb6f177c3e46af51f2eb42b46452
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8585230144659462126
+    List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1065,8 +1128,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: af68b654bb539047b5d6632da777fe03
     GuidInternal: 
-    m_lastTime: -8585230398076453491
-    List: []
+    m_lastTime: -8585230144659092131
+    List:
+    - name: SW_Player_Footsteps_Speed
+      guid: ccec13e9243705478ae7c0c2cee93dec
+      id: 3161615637
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: af68b654bb539047b5d6632da777fe03
+      - ElementName: SW_Player_Footsteps_Speed
+        ObjectType: 11
+        guid: ccec13e9243705478ae7c0c2cee93dec
+      Path: Switches\Default Work Unit\SW_Player_Footsteps_Speed
+      values:
+      - name: Normal
+        guid: 092b35502a4b0c48996827c3cfebf145
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: af68b654bb539047b5d6632da777fe03
+        - ElementName: SW_Player_Footsteps_Speed
+          ObjectType: 11
+          guid: ccec13e9243705478ae7c0c2cee93dec
+        - ElementName: Normal
+          ObjectType: 10
+          guid: 092b35502a4b0c48996827c3cfebf145
+      - name: Slowed
+        guid: 8cc5f70e7bbfa549a05528b7f5041134
+        id: 3101926941
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: af68b654bb539047b5d6632da777fe03
+        - ElementName: SW_Player_Footsteps_Speed
+          ObjectType: 11
+          guid: ccec13e9243705478ae7c0c2cee93dec
+        - ElementName: Slowed
+          ObjectType: 10
+          guid: 8cc5f70e7bbfa549a05528b7f5041134
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -1079,10 +1192,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e452db9e7ea9f742abb1ccbae4ea6030
     GuidInternal: 
-    m_lastTime: -8585230398076103396
+    m_lastTime: -8585230144658732126
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 090000000a0000000e0000000f0000001500000019000000
+  ExpandedWaapiItemIds: 090000000a0000000e0000000f00000015000000190000001d00000027000000280000002a0000002b0000002c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

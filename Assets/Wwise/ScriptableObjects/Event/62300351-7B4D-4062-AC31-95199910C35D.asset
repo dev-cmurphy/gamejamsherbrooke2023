@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac04f58fcc0baf44cb363953de8dc7b5, type: 3}
-  m_Name: 31BAC24D-12BD-403B-AD67-27BA6CBD73CB
+  m_Script: {fileID: 11500000, guid: da9143131140e184f8edd01ef4584ec5, type: 3}
+  m_Name: 62300351-7B4D-4062-AC31-95199910C35D
   m_EditorClassIdentifier: 
-  objectName: Game_Jam
-  id: 3958415146
-  guid: 31BAC24D-12BD-403B-AD67-27BA6CBD73CB
+  objectName: Play_Stinger_Win
+  id: 470132223
+  guid: 62300351-7B4D-4062-AC31-95199910C35D

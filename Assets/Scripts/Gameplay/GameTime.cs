@@ -23,6 +23,9 @@ namespace kingcrimson.gameplay
         private float m_timeFlowRate;
         [SerializeField]
         private Animator m_timeAnimator;
+        private bool m_timeIsShown = false;
+
+        [SerializeField] private AK.Wwise.Event m_showTimeEvent, m_hideTimeEvent;
 
         private void Awake()
         {
@@ -58,7 +61,6 @@ namespace kingcrimson.gameplay
             }
         }
 
-        private bool m_timeIsShown = false;
 
         private void Update()
         {
@@ -67,11 +69,12 @@ namespace kingcrimson.gameplay
                 m_timeIsShown = !m_timeIsShown;
                 if (m_timeIsShown)
                 {
+                    m_showTimeEvent.Post(this.gameObject);
                     m_timeAnimator.SetBool("Show", true);
                 }
                 else
                 {
-                    m_timeFlowRate = 1;
+                    m_hideTimeEvent.Post(this.gameObject);
                     m_timeAnimator.SetBool("Show", false);
                 }
             }

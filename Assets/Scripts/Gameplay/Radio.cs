@@ -57,10 +57,16 @@ namespace kingcrimson.gameplay
             {
                 if (m_currentBattery > 0)
                 {
-                    m_inUse = true;
-                    m_playRadioEvent.Post(gameObject);
+                    StartCoroutine(PlayCoroutine());
                 }
             }
+        }
+
+        private IEnumerator PlayCoroutine()
+        {
+            m_playRadioEvent.Post(gameObject);
+            yield return new WaitForSeconds(0.34f);
+            m_inUse = true;
         }
 
         public void Stop()

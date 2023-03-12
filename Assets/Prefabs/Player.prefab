@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 442258579
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0.1641509, b: 0.1641509, a: 1}
@@ -139,6 +139,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b36ddfbd72844d94987929fa197ec336, type: 2}
+  m_FOVAnimator: {fileID: 0}
   OnWokenessChange:
     m_PersistentCalls:
       m_Calls: []
@@ -181,7 +182,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &9164341120410329980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,11 +199,23 @@ MonoBehaviour:
   m_footstepsPlayEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ef65ef5070d70e34b895b723a72cd77d, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: ba6a579c8be25db499e26637b8a69f5e, type: 2}
   m_footstepsStopEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ab425a7b1187546449676b74d897c562, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: be08eeeabdc413d48bfdc0700adbdff0, type: 2}
+  m_footstepNormalSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ce0c54ac4f7450c4f8fa11e8bb802f29, type: 2}
+  m_footstepSlowSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e82c30430767c8b4abf3232d6a55fb47, type: 2}
 --- !u!95 &672469463629431314
 Animator:
   serializedVersion: 5

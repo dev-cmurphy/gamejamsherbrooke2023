@@ -14,7 +14,7 @@ namespace kingcrimson.gameplay
     {
         [SerializeField] private GameTime m_gameTime;
         private Animator m_animator;
-        [SerializeField] private AK.Wwise.Event m_endLoseEvent;
+        [SerializeField] private AK.Wwise.Event m_endLoseEvent, m_endWinEvent;
         private bool m_isVictory;
 
         public void IsVictory(bool victory)
@@ -44,6 +44,10 @@ namespace kingcrimson.gameplay
             if (!m_isVictory)
             {
                 m_endLoseEvent.Post(gameObject);
+            }
+            else
+            {
+                m_endWinEvent.Post(gameObject);
             }
             yield return null;
         }

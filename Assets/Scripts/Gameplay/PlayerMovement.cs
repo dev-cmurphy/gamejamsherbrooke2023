@@ -10,6 +10,7 @@ namespace kingcrimson.gameplay
         [SerializeField] private float m_speed;
 
         [SerializeField] private AK.Wwise.Event m_footstepsPlayEvent, m_footstepsStopEvent;
+        [SerializeField] private AK.Wwise.Switch m_footstepNormalSwitch, m_footstepSlowSwitch;
 
         private bool m_isSoundPlaying;
 
@@ -61,6 +62,15 @@ namespace kingcrimson.gameplay
                 {
                     m_isSoundPlaying = true;
                     m_footstepsPlayEvent.Post(gameObject);
+                }
+
+                if (displacement.sqrMagnitude > 2.5f * 2.5f)
+                {
+                    m_footstepNormalSwitch.SetValue(this.gameObject);
+                }
+                else
+                {
+                    m_footstepSlowSwitch.SetValue(this.gameObject);
                 }
             }
             else
