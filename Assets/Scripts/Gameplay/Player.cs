@@ -79,7 +79,7 @@ namespace kingcrimson.gameplay
                 m_radio = radio;
                 // OnRadioObtained ?
                 m_radio.transform.parent = this.transform;
-                m_radio.transform.localPosition = Vector2.left;
+                m_radio.transform.localPosition = Vector2.left * 0.2f;
                 m_radio.transform.localScale = Vector2.one * 0.5f;
             }
         }

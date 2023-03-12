@@ -14,6 +14,8 @@ namespace kingcrimson.gameplay
 
         [SerializeField] private Slider m_slider;
 
+        [SerializeField] private ParticleSystem notes;
+
         private float m_currentBattery;
         private bool m_inUse;
 
@@ -23,6 +25,7 @@ namespace kingcrimson.gameplay
             m_inUse = false;
             m_slider.gameObject.SetActive(false);
             m_slider.maxValue = m_maxBattery;
+            
         }
 
         private void FixedUpdate()
@@ -38,6 +41,7 @@ namespace kingcrimson.gameplay
 
                     if (m_currentBattery <= 0)
                     {
+                        notes.Stop();
                         m_inUse = false;
                         m_currentBattery = 0;
                         m_stopRadioEvent.Post(gameObject);
@@ -66,6 +70,7 @@ namespace kingcrimson.gameplay
         {
             m_playRadioEvent.Post(gameObject);
             yield return new WaitForSeconds(0.34f);
+            notes.Play();
             m_inUse = true;
         }
 
@@ -73,6 +78,7 @@ namespace kingcrimson.gameplay
         {
             m_inUse = false;
             m_stopRadioEvent.Post(gameObject);
+            notes.Stop();
         }
     }
 }
