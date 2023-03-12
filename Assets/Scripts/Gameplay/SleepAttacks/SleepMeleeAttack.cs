@@ -47,7 +47,15 @@ namespace kingcrimson.gameplay
 
         public override IEnumerator Execute()
         {
+
             m_animator.SetTrigger("StartAttack");
+            for (float t = 0; t < 1; t += Time.fixedDeltaTime)
+            {
+                transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, t);
+                Vector3 pos = (m_target.transform.position + Vector3.up * m_playerWindUpOffset);
+                transform.position = pos;
+                yield return new WaitForFixedUpdate();
+            }
             while(!m_isOver)
             {
                 if (m_shouldFollowPlayer)

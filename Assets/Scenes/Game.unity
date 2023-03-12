@@ -7289,6 +7289,18 @@ PrefabInstance:
       value: 0.42745098
       objectReference: {fileID: 0}
     - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8711565
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.17265925
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135851388748467133, guid: 6c314d68e963122409e61845b96e80f6, type: 3}
       propertyPath: m_fontSizeMax
       value: 320
       objectReference: {fileID: 0}
