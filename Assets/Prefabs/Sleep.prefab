@@ -70,15 +70,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1934303253
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 540147370, guid: 0d767747196120b449a72494ac8b3b33, type: 3}
+  m_Sprite: {fileID: 940062518, guid: 06e641327b9f62a42996a982b99a3786, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -143,9 +143,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.47, y: -1.45}
-      - {x: 0, y: 2.87}
-      - {x: -2.5, y: -1.45}
+    - - {x: -0.15494108, y: -1.9228594}
+      - {x: 0.9036534, y: -0.65205}
+      - {x: -0.17732239, y: 1.8060665}
+      - {x: -1.317852, y: -0.65205026}
 --- !u!114 &8149952237606221021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
+  m_gameTime: {fileID: 0}
   Speed: 0
   MeleeAttackPrefab: {fileID: 0}
   RangedAttackPrefab: {fileID: 0}

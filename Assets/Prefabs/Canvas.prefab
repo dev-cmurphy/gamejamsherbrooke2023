@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 4705447448724220107}
   - component: {fileID: 4705447448724220104}
   - component: {fileID: 4705447448724220105}
-  - component: {fileID: 4705447448724220110}
+  - component: {fileID: 7558105225807587339}
   m_Layer: 5
   m_Name: IntroScreen
   m_TagString: Untagged
@@ -683,8 +683,8 @@ MonoBehaviour:
   m_introEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
---- !u!114 &4705447448724220110
+    WwiseObjectReference: {fileID: 11400000, guid: 0e2cd6a74fb121c49ba088686eed084c, type: 2}
+--- !u!114 &7558105225807587339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4705447448724220106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cebadb626f0ee614ab55ee7015c4c83a, type: 3}
+  m_Script: {fileID: 11500000, guid: a3a67235f41ca124e9d7245ef218fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:
@@ -1458,7 +1458,7 @@ GameObject:
   - component: {fileID: 4705447449659092276}
   - component: {fileID: 4705447449659092282}
   - component: {fileID: 4705447449659092277}
-  - component: {fileID: 4705447449659092283}
+  - component: {fileID: 3341916506178248736}
   m_Layer: 5
   m_Name: EndScreen
   m_TagString: Untagged
@@ -1524,8 +1524,8 @@ MonoBehaviour:
   m_endLoseEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ae4682792f1f28349bf99ded486bed2e, type: 2}
---- !u!114 &4705447449659092283
+    WwiseObjectReference: {fileID: 11400000, guid: 9863add1f5140fd428528a49be63abf9, type: 2}
+--- !u!114 &3341916506178248736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4705447449659092279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cebadb626f0ee614ab55ee7015c4c83a, type: 3}
+  m_Script: {fileID: 11500000, guid: a3a67235f41ca124e9d7245ef218fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:

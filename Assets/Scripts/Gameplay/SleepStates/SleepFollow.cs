@@ -24,7 +24,7 @@ namespace kingcrimson.gameplay
             if (ShouldMelee(displacement))
             {
                 m_lastMeleeTime = now;
-                //return new SleepMelee(this, m_owner);
+                return new SleepMelee(this, m_owner);
             }
 
             if (ShouldAura(now))
@@ -36,7 +36,7 @@ namespace kingcrimson.gameplay
             if (ShouldRange(displacement))
             {
                 m_lastRangeTime = now;
-                //return new SleepRange(this, m_owner);
+                return new SleepRange(this, m_owner);
             }
 
             displacement.Normalize();
@@ -49,7 +49,7 @@ namespace kingcrimson.gameplay
 
         private bool ShouldAura(float now)
         {
-            if ((now - m_lastAuraTime) > 10)
+            if ((now - m_lastAuraTime) > 30)
             {
                 return true;
             }

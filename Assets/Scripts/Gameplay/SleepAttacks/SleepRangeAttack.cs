@@ -86,7 +86,7 @@ namespace kingcrimson.gameplay
             if (m_isActive)
             {
                 m_isActive = false;
-
+                m_travelStopEvent.Post(gameObject);
                 if (m_instantiateOnDestruction)
                 {
                     var go = GameObject.Instantiate(m_instantiateOnDestruction);
@@ -95,11 +95,10 @@ namespace kingcrimson.gameplay
 
                 if (collision.TryGetComponent(out Player p))
                 {
-                    m_hitEvent.Post(gameObject);
                     ApplyEffect(p);
-
-                    Destroy(this.gameObject);
                 }
+
+                Destroy(this.gameObject);
             }
         }
     }
