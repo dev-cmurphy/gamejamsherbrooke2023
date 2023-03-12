@@ -12,6 +12,8 @@ namespace kingcrimson.gameplay
 
         [SerializeField] private AK.Wwise.RTPC m_wokenessRTPC;
 
+        [SerializeField] private Animator m_FOVAnimator;
+
         private float m_wokeness;
 
         public float Wokeness { get { return m_wokeness; } }
@@ -41,6 +43,7 @@ namespace kingcrimson.gameplay
 
         private IEnumerator FOVReductionCoroutine(float duration)
         {
+            m_FOVAnimator.SetTrigger("Reduce");
             m_animator.SetBool("ReducedFOV", true);
             yield return new WaitForSeconds(duration);
             m_animator.SetBool("ReducedFOV", false);

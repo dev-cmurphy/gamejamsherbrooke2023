@@ -21,6 +21,8 @@ namespace kingcrimson.gameplay
         public UnityEvent<int> OnNewMinute;
 
         private float m_timeFlowRate;
+        [SerializeField]
+        private Animator m_timeAnimator;
 
         private void Awake()
         {
@@ -56,11 +58,40 @@ namespace kingcrimson.gameplay
             }
         }
 
+        private bool m_timeIsShown = false;
+
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                m_timeIsShown = !m_timeIsShown;
+                if (m_timeIsShown)
+                {
+                    m_timeAnimator.SetBool("Show", true);
+                }
+                else
+                {
+                    m_timeFlowRate = 1;
+                    m_timeAnimator.SetBool("Show", false);
+                }
+            }
+
             if (m_isTimePassing)
             {
+                if (m_timeIsShown)
+                {
+                    m_timeFlowRate -= Time.deltaTime * 0.009f;
+
+                }
+                else
+                {
+                    m_timeFlowRate += Time.deltaTime * 0.005f;
+                }
+
+                m_timeFlowRate = Mathf.Clamp(m_timeFlowRate, 0.25f, 1.2f);
+
                 TickGameTime();
+
             }
         }
 
